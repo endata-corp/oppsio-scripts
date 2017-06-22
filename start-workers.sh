@@ -8,5 +8,5 @@ sudo -u ricardo docker pull endata/oppsio-workers
 for i in `seq 1 10`;
 do
     echo $i
-    docker run -d -it --rm -e action=crawl endata/oppsio-workers
+    docker run -d -it --rm -e ID=$1 endata/oppsio-workers
 done
